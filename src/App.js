@@ -14,7 +14,7 @@ function App() {
   const romanValue = RomanNumerals.toRoman(value);
 
   const handleNumeral = (event) => {
-    setValue(event.target.value);
+    setValue(parseInt(event.target.value));
   };
 
   const handleRoman = (event) => {
@@ -27,6 +27,7 @@ function App() {
       <div className="App-wrapper">
         <h1>Roman Numeral Converter</h1>
         <p>Converting a positive integer between the range of 1~3000</p>
+        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/41/53/au-t2-m-261-roman-numerals-chart-prompt-frame-_ver_1.avif" />
         <div className="converter-section">
           <div className="input-wrapper">
             <label for="roman">Roman:</label>

@@ -13,6 +13,10 @@
   color: white;
 }
 
+.App-wrapper * + * {
+  margin-bottom: 50px;
+}
+
 input {
   padding: 10px 14px;
   font-size: 1.6rem;
@@ -21,13 +25,12 @@ input {
 .converter-section {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
 }
 
 /* input css */
 .input-wrapper {
   display: flex;
-  margin-bottom: 50px;
 }
 
 .input-wrapper label {
