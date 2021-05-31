@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { RomanNumerals } from './lib/romanNumerals';
+import { LARGEST_NUM, RomanNumerals } from './lib/romanNumerals';
 
 function App() {
   const [value, setValue] = useState(1);
@@ -22,7 +22,9 @@ function App() {
     <div className="App">
       <div className="App-wrapper">
         <h1>Roman Numeral Converter</h1>
-        <p>Converting a positive integer between the range of 1~3000</p>
+        <p>
+          Converting a positive integer between the range of 1~{LARGEST_NUM}
+        </p>
         <img
           src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/41/53/au-t2-m-261-roman-numerals-chart-prompt-frame-_ver_1.avif"
           alt="Roman Numerals Chart"

@@ -41,8 +41,12 @@ const fromRomanArray = toRomanArray
     if (keyA.length === keyB.length) return 0;
   });
 
+export const LARGEST_NUM = 3999;
+
 export const RomanNumerals = {
   toRoman: (number) => {
+    if (!isValidNumeralInput(number)) return null;
+
     let argNumber = number;
     let result = '';
 
@@ -81,5 +85,15 @@ export const RomanNumerals = {
 // The inputs have been sanitised in the UI so that APIs should only receive valid inputs
 // These are additional checks just in case
 function isValidRomanInput(romanInput) {
-  return /[IVXLCDM]/.test(romanInput);
+  return !/[^IVXLCDM]/.test(romanInput);
+}
+
+// positive integer less than 3999
+function isValidNumeralInput(number) {
+  return isPositiveInt(number) && Number(number) <= LARGEST_NUM;
+}
+
+function isPositiveInt(number) {
+  var n = Math.floor(Number(number));
+  return n !== Infinity && n === Number(number) && n > 0;
 }
