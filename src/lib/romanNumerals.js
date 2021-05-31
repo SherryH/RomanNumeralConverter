@@ -38,7 +38,7 @@ const fromRomanArray = toRomanArray
   .sort(([keyA], [keyB]) => {
     if (keyA.length > keyB.length) return -1;
     if (keyA.length < keyB.length) return 1;
-    if (keyA.length === keyB.length) return 0;
+    return 0;
   });
 
 export const LARGEST_NUM = 3999;
