@@ -63,13 +63,13 @@ describe('toRoman', () => {
     expect(RomanNumerals.toRoman(3999)).toBe('MMMCMXCIX');
   });
   // test invalid case
-  it('4000 should output null', () => {
-    expect(RomanNumerals.toRoman(4000)).toBe(null);
+  it('4000 should output ""', () => {
+    expect(RomanNumerals.toRoman(4000)).toBe('');
   });
-  it('-6 should output null', () => {
-    expect(RomanNumerals.toRoman(-6)).toBe(null);
+  it('-6 should output ""', () => {
+    expect(RomanNumerals.toRoman(-6)).toBe('');
   });
-  it('0.8 should output null', () => {
-    expect(RomanNumerals.toRoman(0.8)).toBe(null);
+  it('0.8 should output ""', () => {
+    expect(RomanNumerals.toRoman(0.8)).toBe('');
   });
 });

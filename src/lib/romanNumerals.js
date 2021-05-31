@@ -45,7 +45,7 @@ export const LARGEST_NUM = 3999;
 
 export const RomanNumerals = {
   toRoman: (number) => {
-    if (!isValidNumeralInput(number)) return null;
+    if (!isValidNumeralInput(number)) return '';
 
     let argNumber = number;
     let result = '';

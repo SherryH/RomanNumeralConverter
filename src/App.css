@@ -22,6 +22,10 @@ input {
   font-size: 1.6rem;
 }
 
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
 .converter-section {
   display: flex;
   flex-direction: column;

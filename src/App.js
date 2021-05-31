@@ -22,9 +22,7 @@ function App() {
     <div className="App">
       <div className="App-wrapper">
         <h1>Roman Numeral Converter</h1>
-        <p>
-          Converting a positive integer between the range of 1~{LARGEST_NUM}
-        </p>
+        <p>Convert a positive integer between the range of 1~{LARGEST_NUM}</p>
         <img
           src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/41/53/au-t2-m-261-roman-numerals-chart-prompt-frame-_ver_1.avif"
           alt="Roman Numerals Chart"
@@ -48,6 +46,8 @@ function App() {
               type="number"
               value={value}
               onChange={handleNumeral}
+              min="1"
+              max="3999"
             />
           </div>
         </div>
