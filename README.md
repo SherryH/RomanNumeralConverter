@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Intro
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is a Roman Numeral Converter for the range 1~3999
+![Roman Numeral Converter](./romanNumeralConverter.png)
+
+A working App can be accessed [here](https://roman-numeral-converter-orcin.vercel.app/).
 
 ## Available Scripts
 

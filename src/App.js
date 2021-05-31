@@ -30,6 +30,7 @@ function App() {
           <div className="input-wrapper">
             <label htmlFor="roman">Roman:</label>
             <input
+              data-testid="roman"
               id="roman"
               name="roman"
               type="text"
@@ -40,6 +41,7 @@ function App() {
           <div className="input-wrapper">
             <label htmlFor="numeral">Number:</label>
             <input
+              data-testid="numeral"
               id="numeral"
               name="numeral"
               type="number"
