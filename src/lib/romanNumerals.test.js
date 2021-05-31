@@ -72,4 +72,7 @@ describe('toRoman', () => {
   it('0.8 should output ""', () => {
     expect(RomanNumerals.toRoman(0.8)).toBe('');
   });
+  it('0 should output ""', () => {
+    expect(RomanNumerals.toRoman(0)).toBe('');
+  });
 });

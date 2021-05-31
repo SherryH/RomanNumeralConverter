@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import { LARGEST_NUM, RomanNumerals } from './lib/romanNumerals';
@@ -11,9 +12,7 @@ function App() {
     const numeral = event.target.value;
     setValue(parseInt(numeral));
   };
-  // make toUpperCase and parseInt inside the lib
-  // write validation
-  // add jest tests
+
   const handleRoman = (event) => {
     setValue(RomanNumerals.fromRoman(event.target.value.toUpperCase()));
   };
@@ -47,7 +46,7 @@ function App() {
               value={value}
               onChange={handleNumeral}
               min="1"
-              max="3999"
+              max={LARGEST_NUM}
             />
           </div>
         </div>
