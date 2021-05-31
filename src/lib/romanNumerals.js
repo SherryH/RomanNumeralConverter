@@ -59,9 +59,9 @@ export const RomanNumerals = {
     return result;
   },
   fromRoman: (romanInput) => {
-    // validation
+    if (!isValidRomanInput(romanInput)) return null;
 
-    let argRoman = romanInput.toUpperCase();
+    let argRoman = romanInput;
     let result = 0;
     for (let [roman, romanNumber] of fromRomanArray) {
       if (argRoman.includes(roman)) {
@@ -76,3 +76,10 @@ export const RomanNumerals = {
     return result;
   },
 };
+
+// validation functions
+// The inputs have been sanitised in the UI so that APIs should only receive valid inputs
+// These are additional checks just in case
+function isValidRomanInput(romanInput) {
+  return /[IVXLCDM]/.test(romanInput);
+}

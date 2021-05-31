@@ -3,22 +3,18 @@ import './App.css';
 import { RomanNumerals } from './lib/romanNumerals';
 
 function App() {
-  // ui display: roman and roman number
-  // actually, just 1 state -> derive 2 displays
-  // state:number -> 1000
-  // numeral = state
-  // roman = toRoman(state)
-  // handler -> setState
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
 
   const romanValue = RomanNumerals.toRoman(value);
 
   const handleNumeral = (event) => {
-    setValue(parseInt(event.target.value));
+    const numeral = event.target.value;
+    setValue(parseInt(numeral));
   };
-
+  // make toUpperCase and parseInt inside the lib
+  // write validation
+  // add jest tests
   const handleRoman = (event) => {
-    console.log('roman received', event.target.value);
     setValue(RomanNumerals.fromRoman(event.target.value.toUpperCase()));
   };
 
@@ -27,10 +23,13 @@ function App() {
       <div className="App-wrapper">
         <h1>Roman Numeral Converter</h1>
         <p>Converting a positive integer between the range of 1~3000</p>
-        <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/41/53/au-t2-m-261-roman-numerals-chart-prompt-frame-_ver_1.avif" />
+        <img
+          src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/41/53/au-t2-m-261-roman-numerals-chart-prompt-frame-_ver_1.avif"
+          alt="Roman Numerals Chart"
+        />
         <div className="converter-section">
           <div className="input-wrapper">
-            <label for="roman">Roman:</label>
+            <label htmlFor="roman">Roman:</label>
             <input
               id="roman"
               name="roman"
@@ -40,7 +39,7 @@ function App() {
             />
           </div>
           <div className="input-wrapper">
-            <label for="numeral">Number:</label>
+            <label htmlFor="numeral">Number:</label>
             <input
               id="numeral"
               name="numeral"
